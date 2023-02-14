@@ -1,6 +1,6 @@
 <!-- begin::Header -->
-<div class="card  g-xxl-12 pr-0"> 
-  
+<div class="card  g-xxl-12 pr-0">
+
     <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
         <!--begin::Content wrapper-->
         <div class="d-flex flex-column flex-column-fluid">
@@ -132,7 +132,7 @@
                                         <!--end::Action=-->
                                     </tr>
                                     <!--begin::Table row-->
-                                    <tr *ngFor="let ticket of tickets | paginate : {
+                                    <tr *ngFor="let ticket of _ticketsObsevable$ |  async | paginate : {
                                     itemsPerPage: pageSize,
                                     currentPage: page,
                                     totalItems: count
@@ -231,4 +231,3 @@
     </div>
     <!--end:::Main-->
 </div>
- 

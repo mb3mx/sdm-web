@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Ticket } from '@app/core/models/tickets/ticket.model';
 import { TicketService } from '@app/core/services/modules/ticket/ticket.service';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-ticket',
@@ -7,8 +10,9 @@ import { TicketService } from '@app/core/services/modules/ticket/ticket.service'
   styleUrls: ['./ticket.component.scss']
 })
 export class TicketComponent implements OnInit {
-   filterSearch: any;
-  tickets: any = [];
+
+  _ticketsObsevable$ : BehaviorSubject<any> = new BehaviorSubject([]);
+  filterSearch: any;
   maxSize = 2;
   currentIndex = -1;
   title = '';
@@ -18,21 +22,17 @@ export class TicketComponent implements OnInit {
   pageSizes = [1, 2, 3];
 
   constructor(private ticketService: TicketService) {
-    this.loadTickets();
-
   }
 
   ngOnInit(): void {
-    
+    this.loadTickets();
   }
 
   loadTickets() {
     const params = this.getRequestParams(this.title, this.page, this.pageSize);
-
-    return this.ticketService.findAllTickets().subscribe((response: any) => {
-      this.tickets = response.records;
+    return this.ticketService.findAllTickets().subscribe((response: Ticket) => {
       this.count = response.records.lenght;
-
+      this._ticketsObsevable$.next(response.records)
     });
   }
 

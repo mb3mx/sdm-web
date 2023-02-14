@@ -19,6 +19,7 @@ export class TicketService {
   findAllTickets(): Observable<Ticket> {
     return this.http.get<Ticket>(`${this.API_URL}v1.0/tickets`).pipe(retry(1), catchError(this.handleError));
   }
+  
 
   // Error handling
   handleError(error: any) {

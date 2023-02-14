@@ -1,112 +1,174 @@
-<!--begin::Main-->
-<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
-    <!--begin::Content wrapper-->
-    <div class="d-flex flex-column flex-column-fluid">
+<div id="kt_app_content" class="app-content flex-column-fluid">
+    <!--begin::Content container-->
+    <div id="kt_app_content_container" class="app-container container-xxl">
+        <!--begin::Form-->
+        <form id="kt_ecommerce_edit_order_form" class="form d-flex flex-column flex-lg-row"
+            data-kt-redirect="../../demo1/dist/apps/ecommerce/sales/listing.html">
 
-        <!--begin::Content-->
-        <div id="kt_app_content" class="app-content flex-column-fluid">
-            <!--begin::Content container-->
-            <div id="kt_app_content_container" class="app-container container-xxl">
-                <!--begin::Layout-->
-                <div class="d-flex flex-column flex-lg-row">
-                    <!--begin::Content-->
-                    <div class="flex-lg-row-fluid mb-10 mb-lg-0 me-lg-7 me-xl-10">
-                        <!--begin::Card-->
-                        <div class="card">
-                            <!--begin::Card body-->
-                            <div class="card-body p-12">
-                                <!--begin::Form-->
-                                <form action="" id="kt_invoice_form">
-                                    <!--begin::Wrapper-->
-                                    <div class="d-flex flex-column align-items-start flex-xxl-row">
-                                         
-                                        <!--begin::Input group-->
-                                        <div class="d-flex flex-center flex-equal fw-row text-nowrap order-1 order-xxl-2 me-4"
-                                            data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                            title="Enter invoice number">
-                                            <span class="fs-2x fw-bold text-gray-800">Invoice #</span>
-                                            <input type="text"
-                                                class="form-control form-control-flush fw-bold text-muted fs-3 w-125px"
-                                                value="2021001" placehoder="..." />
-                                        </div>
-                                        <!--end::Input group-->
-                                   
-                                    </div>
-                                    <!--end::Top-->
-                                    <!--begin::Separator-->
-                                    <div class="separator separator-dashed my-10"></div>
-                                    <!--end::Separator-->
-                                    <!--begin::Wrapper-->
-                                    <div class="mb-0">
-                                        <!--begin::Row-->
-                                        <div class="row gx-10 mb-5">
-                                            <!--begin::Col-->
-                                            <div class="col-lg-6">
-                                                <label class="form-label fs-6 fw-bold text-gray-700 mb-3">Asunto</label>
-                                                <!--begin::Input group-->
-                                                <div class="mb-5">
-                                                    <input type="text" class="form-control form-control-solid"
-                                                        placeholder="Name" />
-                                                </div>
-                                                <!--end::Input group-->
-                                                <!--begin::Input group-->
-                                                <div class="mb-5">
-                                                    <input type="text" class="form-control form-control-solid"
-                                                        placeholder="Email" />
-                                                </div>
-                                                <!--end::Input group-->
-                                              
-                                            </div>
-                                            <!--end::Col-->
-                                            <!--begin::Col-->
-                                            <div class="col-lg-6">
-                                                <label class="form-label fs-6 fw-bold text-gray-700 mb-3">Bill
-                                                    To</label>
-                                                <!--begin::Input group-->
-                                                <div class="mb-5">
-                                                    <input type="text" class="form-control form-control-solid"
-                                                        placeholder="Name" />
-                                                </div>
-                                                <!--end::Input group-->
-                                                <!--begin::Input group-->
-                                                <div class="mb-5">
-                                                    <input type="text" class="form-control form-control-solid"
-                                                        placeholder="Email" />
-                                                </div>
-                                                <!--end::Input group-->
-                                              
-                                            </div>
-                                            <!--end::Col-->
-                                        </div>
-                                        <!--end::Row-->
-                                      
-                                        <!--end::Item template-->
-                                        <!--begin::Notes-->
-                                        <div class="mb-0">
-                                            <label class="form-label fs-6 fw-bold text-gray-700">Notes</label>
-                                            <textarea name="notes" class="form-control form-control-solid" rows="3"
-                                                placeholder="Thanks for your business"></textarea>
-                                        </div>
-                                        <!--end::Notes-->
-                                    </div>
-                                    <!--end::Wrapper-->
-                                </form>
-                                <!--end::Form-->
-                            </div>
-                            <!--end::Card body-->
+            <!--end::Aside column-->
+            <!--begin::Main column-->
+            <div class="d-flex flex-column flex-lg-row-fluid gap-7 gap-lg-12">
+
+                <!--begin::Order details-->
+                <div class="card card-flush py-4">
+                    <!--begin::Card header-->
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h2>Nuevo Ticket</h2>
                         </div>
-                        <!--end::Card-->
                     </div>
-                    <!--end::Content-->
+                    <!--end::Card header-->
+                    <!--begin::Card body-->
+                    <div class="card-body pt-0">
+                        <!--begin::Billing address-->
+                        <div class="d-flex flex-column gap-5 gap-md-7">
 
+                            <!--begin::Input group-->
+                            <div class="d-flex flex-column flex-md-row gap-20">
+                                <div class="fv-row flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Asunto</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input class="form-control form-control-solid" name="billing_order_address_1" placeholder="Asunto"
+                                        value="" />
+                                    <!--end::Input-->
+                                </div>
+
+                            </div>
+                            <!--end::Input group-->
+
+                            <!--begin::Input group-->
+                            <div class="d-flex flex-column flex-md-row gap-20">
+                                <div class="fv-row flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Cliente</label>
+                                    <!--end::Label-->
+                                    <!--begin::Select2-->
+                                    <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                        data-placeholder="Select an option" name="payment_method"
+                                        id="kt_ecommerce_edit_order_payment">
+                                        <option></option>
+                                        <option value="cod">Cash on Delivery</option>
+                                        <option value="visa">Credit Card (Visa)</option>
+                                        <option value="mastercard">Credit Card (Mastercard)</option>
+                                        <option value="paypal">Paypal</option>
+                                    </select>
+                                    <!--end::Select2-->
+                                </div>
+                                <div class="flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Equipo</label>
+                                    <!--end::Label-->
+                                    <!--begin::Select2-->
+                                    <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                        data-placeholder="Select an option" name="payment_method"
+                                        id="kt_ecommerce_edit_order_payment">
+                                        <option></option>
+                                        <option value="cod">Cash on Delivery</option>
+                                        <option value="visa">Credit Card (Visa)</option>
+                                        <option value="mastercard">Credit Card (Mastercard)</option>
+                                        <option value="paypal">Paypal</option>
+                                    </select>
+                                    <!--end::Select2-->
+                                </div>
+                                <div class="fv-row flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="form-label">Prioridad</label>
+                                    <!--end::Label-->
+                                    <!--begin::Select2-->
+                                    <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                        data-placeholder="Select an option" name="payment_method"
+                                        id="kt_ecommerce_edit_order_payment">
+                                        <option></option>
+                                        <option value="cod">Cash on Delivery</option>
+                                        <option value="visa">Credit Card (Visa)</option>
+                                        <option value="mastercard">Credit Card (Mastercard)</option>
+                                        <option value="paypal">Paypal</option>
+                                    </select>
+                                    <!--end::Select2-->
+                                </div>
+
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="d-flex flex-column flex-md-row gap-5">
+
+                                <div class="flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">No Serie</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input class="form-control form-control-solid" name="billing_order_address_2" placeholder="No Serie" />
+                                    <!--end::Input-->
+                                </div>
+                                <div class="flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Contacto</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input class="form-control form-control-solid" name="billing_order_city" placeholder="Contacto"
+                                        value="" />
+                                    <!--end::Input-->
+                                </div>
+                                <div class="fv-row flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="form-label">Email</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input class="form-control form-control-solid" name="billing_order_postcode" placeholder="Email"
+                                        value="" />
+                                    <!--end::Input-->
+                                </div>
+                                <div class="fv-row flex-row-fluid">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Telefono</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+
+                                    <input type="text" class="form-control form-control-solid" placeholder="Telefono"
+                                        name="telefon" value="" />
+
+                                    <!--end::Input-->
+                                </div>
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="fv-row">
+                                <!--begin::Label-->
+                                <label class="required form-label">Descripcion</label>
+                                <!--end::Label-->
+                                <!--begin::basic autosize textarea-->
+                                <div class="d-flex flex-column mb-10 fv-row">
+                                    <!--begin::Label-->
+                                    <!--end::Label-->
+                                    <textarea class="form-control form-control-solid rounded-3" rows="4"></textarea>
+                                </div>
+                                <!--end::basic autosize textarea-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
+                        <!--end::Billing address-->
+                    </div>
+                    <!--end::Card body-->
                 </div>
-                <!--end::Layout-->
-            </div>
-            <!--end::Content container-->
-        </div>
-        <!--end::Content-->
-    </div>
-    <!--end::Content wrapper-->
+                <!--end::Order details-->
+                <div class="d-flex justify-content-end">
+                    <!--begin::Button-->
+                    <a href="" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Cancelar</a>
+                    <!--end::Button-->
+                    <!--begin::Button-->
+                    <button type="submit" id="kt_ecommerce_edit_order_submit" class="btn btn-primary">
+                        <span class="indicator-label">Gardar</span>
 
+                    </button>
+                    <!--end::Button-->
+                </div>
+            </div>
+            <!--end::Main column-->
+        </form>
+        <!--end::Form-->
+    </div>
+    <!--end::Content container-->
 </div>
-<!--end:::Main-->
+<!--end::Content-->
