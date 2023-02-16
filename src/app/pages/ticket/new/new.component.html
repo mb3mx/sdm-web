@@ -1,174 +1,177 @@
-<div id="kt_app_content" class="app-content flex-column-fluid">
-    <!--begin::Content container-->
-    <div id="kt_app_content_container" class="app-container container-xxl">
-        <!--begin::Form-->
-        <form id="kt_ecommerce_edit_order_form" class="form d-flex flex-column flex-lg-row"
-            data-kt-redirect="../../demo1/dist/apps/ecommerce/sales/listing.html">
+<div class="d-grid gap-0 gap-sm-0">
+    <div id="kt_app_content" class="app-content flex-column-fluid">
+        <!--begin::Content container-->
+        <div id="kt_app_content_container" class="app-container container-xxl">
+            <!--begin::Form-->
+            <form id="kt_ecommerce_edit_order_form" class="form d-flex flex-column flex-lg-row"
+                data-kt-redirect="../../demo1/dist/apps/ecommerce/sales/listing.html">
 
-            <!--end::Aside column-->
-            <!--begin::Main column-->
-            <div class="d-flex flex-column flex-lg-row-fluid gap-7 gap-lg-12">
+                <!--end::Aside column-->
+                <!--begin::Main column-->
+                <div class="d-flex flex-column flex-lg-row-fluid gap-12 gap-lg-12 gap-xs-20 gap-1 gap-sm-0">
 
-                <!--begin::Order details-->
-                <div class="card card-flush py-4">
-                    <!--begin::Card header-->
-                    <div class="card-header">
-                        <div class="card-title">
-                            <h2>Nuevo Ticket</h2>
+                    <!--begin::Order details-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h2>Nuevo Ticket</h2>
+                            </div>
                         </div>
-                    </div>
-                    <!--end::Card header-->
-                    <!--begin::Card body-->
-                    <div class="card-body pt-0">
-                        <!--begin::Billing address-->
-                        <div class="d-flex flex-column gap-5 gap-md-7">
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <!--begin::Billing address-->
+                            <div class="d-flex flex-column gap-12 gap-md-12 gap-xs-12">
 
-                            <!--begin::Input group-->
-                            <div class="d-flex flex-column flex-md-row gap-20">
-                                <div class="fv-row flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="required form-label">Asunto</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <input class="form-control form-control-solid" name="billing_order_address_1" placeholder="Asunto"
-                                        value="" />
-                                    <!--end::Input-->
+                                <!--begin::Input group-->
+                                <div class="d-flex flex-column flex-md-row gap-20">
+                                    <div class="fv-row flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="required form-label">Asunto</label>
+                                        <!--end::Label-->
+                                        <!--begin::Input-->
+                                        <input class="form-control form-control-solid" name="billing_order_address_1"
+                                            placeholder="Asunto" value="" />
+                                        <!--end::Input-->
+                                    </div>
+
                                 </div>
+                                <!--end::Input group-->
 
+                                <!--begin::Input group-->
+                                <div class="d-flex flex-column flex-md-row gap-20">
+                                    <div class="fv-row flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="required form-label">Cliente</label>
+                                        <!--end::Label-->
+                                        <!--begin::Select2-->
+                                        <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                            data-placeholder="Select an option" name="payment_method"
+                                            id="kt_ecommerce_edit_order_payment">
+                                            <option></option>
+                                            <option value="cod">Cash on Delivery</option>
+                                            <option value="visa">Credit Card (Visa)</option>
+                                            <option value="mastercard">Credit Card (Mastercard)</option>
+                                            <option value="paypal">Paypal</option>
+                                        </select>
+                                        <!--end::Select2-->
+                                    </div>
+                                    <div class="flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="required form-label">Equipo</label>
+                                        <!--end::Label-->
+                                        <!--begin::Select2-->
+                                        <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                            data-placeholder="Select an option" name="payment_method"
+                                            id="kt_ecommerce_edit_order_payment">
+                                            <option></option>
+                                            <option value="cod">Cash on Delivery</option>
+                                            <option value="visa">Credit Card (Visa)</option>
+                                            <option value="mastercard">Credit Card (Mastercard)</option>
+                                            <option value="paypal">Paypal</option>
+                                        </select>
+                                        <!--end::Select2-->
+                                    </div>
+                                    <div class="fv-row flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="form-label">Prioridad</label>
+                                        <!--end::Label-->
+                                        <!--begin::Select2-->
+                                        <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                            data-placeholder="Select an option" name="payment_method"
+                                            id="kt_ecommerce_edit_order_payment">
+                                            <option></option>
+                                            <option value="cod">Cash on Delivery</option>
+                                            <option value="visa">Credit Card (Visa)</option>
+                                            <option value="mastercard">Credit Card (Mastercard)</option>
+                                            <option value="paypal">Paypal</option>
+                                        </select>
+                                        <!--end::Select2-->
+                                    </div>
+
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="d-flex flex-column flex-md-row gap-5">
+
+                                    <div class="flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="required form-label">No Serie</label>
+                                        <!--end::Label-->
+                                        <!--begin::Input-->
+                                        <input class="form-control form-control-solid" name="billing_order_address_2"
+                                            placeholder="No Serie" />
+                                        <!--end::Input-->
+                                    </div>
+                                    <div class="flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="required form-label">Contacto</label>
+                                        <!--end::Label-->
+                                        <!--begin::Input-->
+                                        <input class="form-control form-control-solid" name="billing_order_city"
+                                            placeholder="Contacto" value="" />
+                                        <!--end::Input-->
+                                    </div>
+                                    <div class="fv-row flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="form-label">Email</label>
+                                        <!--end::Label-->
+                                        <!--begin::Input-->
+                                        <input class="form-control form-control-solid" name="billing_order_postcode"
+                                            placeholder="Email" value="" />
+                                        <!--end::Input-->
+                                    </div>
+                                    <div class="fv-row flex-row-fluid">
+                                        <!--begin::Label-->
+                                        <label class="required form-label">Telefono</label>
+                                        <!--end::Label-->
+                                        <!--begin::Input-->
+
+                                        <input type="text" class="form-control form-control-solid"
+                                            placeholder="Telefono" name="telefon" value="" />
+
+                                        <!--end::Input-->
+                                    </div>
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="fv-row">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Descripcion</label>
+                                    <!--end::Label-->
+                                    <!--begin::basic autosize textarea-->
+                                    <div class="d-flex flex-column mb-10 fv-row">
+                                        <!--begin::Label-->
+                                        <!--end::Label-->
+                                        <textarea class="form-control form-control-solid rounded-3" rows="4"></textarea>
+                                    </div>
+                                    <!--end::basic autosize textarea-->
+                                </div>
+                                <!--end::Input group-->
                             </div>
-                            <!--end::Input group-->
-
-                            <!--begin::Input group-->
-                            <div class="d-flex flex-column flex-md-row gap-20">
-                                <div class="fv-row flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="required form-label">Cliente</label>
-                                    <!--end::Label-->
-                                    <!--begin::Select2-->
-                                    <select class="form-select mb-2" data-control="select2" data-hide-search="true"
-                                        data-placeholder="Select an option" name="payment_method"
-                                        id="kt_ecommerce_edit_order_payment">
-                                        <option></option>
-                                        <option value="cod">Cash on Delivery</option>
-                                        <option value="visa">Credit Card (Visa)</option>
-                                        <option value="mastercard">Credit Card (Mastercard)</option>
-                                        <option value="paypal">Paypal</option>
-                                    </select>
-                                    <!--end::Select2-->
-                                </div>
-                                <div class="flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="required form-label">Equipo</label>
-                                    <!--end::Label-->
-                                    <!--begin::Select2-->
-                                    <select class="form-select mb-2" data-control="select2" data-hide-search="true"
-                                        data-placeholder="Select an option" name="payment_method"
-                                        id="kt_ecommerce_edit_order_payment">
-                                        <option></option>
-                                        <option value="cod">Cash on Delivery</option>
-                                        <option value="visa">Credit Card (Visa)</option>
-                                        <option value="mastercard">Credit Card (Mastercard)</option>
-                                        <option value="paypal">Paypal</option>
-                                    </select>
-                                    <!--end::Select2-->
-                                </div>
-                                <div class="fv-row flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="form-label">Prioridad</label>
-                                    <!--end::Label-->
-                                    <!--begin::Select2-->
-                                    <select class="form-select mb-2" data-control="select2" data-hide-search="true"
-                                        data-placeholder="Select an option" name="payment_method"
-                                        id="kt_ecommerce_edit_order_payment">
-                                        <option></option>
-                                        <option value="cod">Cash on Delivery</option>
-                                        <option value="visa">Credit Card (Visa)</option>
-                                        <option value="mastercard">Credit Card (Mastercard)</option>
-                                        <option value="paypal">Paypal</option>
-                                    </select>
-                                    <!--end::Select2-->
-                                </div>
-
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="d-flex flex-column flex-md-row gap-5">
-
-                                <div class="flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="required form-label">No Serie</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <input class="form-control form-control-solid" name="billing_order_address_2" placeholder="No Serie" />
-                                    <!--end::Input-->
-                                </div>
-                                <div class="flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="required form-label">Contacto</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <input class="form-control form-control-solid" name="billing_order_city" placeholder="Contacto"
-                                        value="" />
-                                    <!--end::Input-->
-                                </div>
-                                <div class="fv-row flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="form-label">Email</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <input class="form-control form-control-solid" name="billing_order_postcode" placeholder="Email"
-                                        value="" />
-                                    <!--end::Input-->
-                                </div>
-                                <div class="fv-row flex-row-fluid">
-                                    <!--begin::Label-->
-                                    <label class="required form-label">Telefono</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-
-                                    <input type="text" class="form-control form-control-solid" placeholder="Telefono"
-                                        name="telefon" value="" />
-
-                                    <!--end::Input-->
-                                </div>
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="fv-row">
-                                <!--begin::Label-->
-                                <label class="required form-label">Descripcion</label>
-                                <!--end::Label-->
-                                <!--begin::basic autosize textarea-->
-                                <div class="d-flex flex-column mb-10 fv-row">
-                                    <!--begin::Label-->
-                                    <!--end::Label-->
-                                    <textarea class="form-control form-control-solid rounded-3" rows="4"></textarea>
-                                </div>
-                                <!--end::basic autosize textarea-->
-                            </div>
-                            <!--end::Input group-->
+                            <!--end::Billing address-->
                         </div>
-                        <!--end::Billing address-->
+                        <!--end::Card body-->
                     </div>
-                    <!--end::Card body-->
-                </div>
-                <!--end::Order details-->
-                <div class="d-flex justify-content-end">
-                    <!--begin::Button-->
-                    <a href="" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Cancelar</a>
-                    <!--end::Button-->
-                    <!--begin::Button-->
-                    <button type="submit" id="kt_ecommerce_edit_order_submit" class="btn btn-primary">
-                        <span class="indicator-label">Gardar</span>
+                    <!--end::Order details-->
+                    <div class="d-flex justify-content-end">
+                        <!--begin::Button-->
+                        <a href="" id="kt_ecommerce_edit_order_cancel" class="btn btn-light me-5">Cancelar</a>
+                        <!--end::Button-->
+                        <!--begin::Button-->
+                        <button type="submit" id="kt_ecommerce_edit_order_submit" class="btn btn-primary">
+                            <span class="indicator-label">Gardar</span>
 
-                    </button>
-                    <!--end::Button-->
+                        </button>
+                        <!--end::Button-->
+                    </div>
                 </div>
-            </div>
-            <!--end::Main column-->
-        </form>
-        <!--end::Form-->
+                <!--end::Main column-->
+            </form>
+            <!--end::Form-->
+        </div>
+        <!--end::Content container-->
     </div>
-    <!--end::Content container-->
+    <!--end::Content-->
 </div>
-<!--end::Content-->
